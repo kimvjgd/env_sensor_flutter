@@ -1,4 +1,9 @@
+import 'package:env_sensor/pages/main_page.dart';
+import 'package:env_sensor/pages/splash_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,28 +11,24 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      debugShowCheckedModeBanner: false,
+      home: SplashPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
 
 // 무조건 가로모드
 //
