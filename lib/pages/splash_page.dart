@@ -1,9 +1,11 @@
+import 'package:env_sensor/setting_store.dart';
 import 'package:flutter/material.dart';
 
 import 'main_page.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  final SettingStore store;
+  SplashPage({Key? key, required this.store}) : super(key: key);
 
   @override
   State<SplashPage> createState() => _SplashPageState();
@@ -21,7 +23,7 @@ class _SplashPageState extends State<SplashPage> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => MainPage(),
+          builder: (context) => MainPage(store: widget.store,),
         ),
       );
     });
