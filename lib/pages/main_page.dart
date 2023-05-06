@@ -1,9 +1,13 @@
+import 'package:env_sensor/pages/setting_page.dart';
+import 'package:env_sensor/setting_store.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/main_tile.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  final SettingStore store;
+
+  const MainPage({Key? key, required this.store}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +17,19 @@ class MainPage extends StatelessWidget {
           actions: [
             IconButton(
               icon: const Icon(Icons.contrast),
-              onPressed: () {},
+              onPressed: () {
+                store.switchTheme();
+              },
             ),
             IconButton(
               icon: const Icon(Icons.settings),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SettingPage(store: store,),
+                  ),
+                );
+              },
             ),
           ],
         ),
@@ -39,9 +51,8 @@ class MainPage extends StatelessWidget {
                 crossAxisCount: 7, // 가로 칸 수
                 childAspectRatio: 0.9, // 가로/세로 비율
                 children: List.generate(
-                  14, // 총 그리드뷰 아이템 수 (7 x 2)
-                      (index) => MainTile()
-                ),
+                    14, // 총 그리드뷰 아이템 수 (7 x 2)
+                    (index) => MainTile()),
               ),
             )
           ],
