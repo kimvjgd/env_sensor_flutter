@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "84016980899",
+    "project_id": "sangsangembaas",
+    "storage_bucket": "sangsangembaas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84016980899:android:236417626f316a2f603016",
+        "android_client_info": {
+          "package_name": "com.dongpakka.env_sensor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84016980899-o6q3iesalm9erqblbq0o8mnm06majh5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeLaPeBOqJpJGDqvFXRmgQFwm9jO5PmMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84016980899-o6q3iesalm9erqblbq0o8mnm06majh5j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "84016980899-897eutg7oonb5gb9cj481bkhl5elipbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dongpakka.envSensor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
